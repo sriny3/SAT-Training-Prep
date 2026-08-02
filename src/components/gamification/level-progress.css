@@ -1,0 +1,177 @@
+.level-progress-container {
+  background: white;
+  padding: var(--spacing-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.level-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-8);
+  padding-bottom: var(--spacing-6);
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.current-level {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.level-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.level-info h3 {
+  margin: 0;
+  color: var(--gray-900);
+  font-size: 1.25rem;
+}
+
+.level-title {
+  margin: var(--spacing-2) 0 0;
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+
+.points-display {
+  text-align: center;
+  padding: var(--spacing-4);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-radius: var(--radius-md);
+  min-width: 120px;
+}
+
+.total-points {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+}
+
+.points-label {
+  margin: var(--spacing-1) 0 0;
+  color: var(--gray-600);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.progress-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-label {
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+.progress-percentage {
+  background: var(--primary);
+  color: white;
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: var(--gray-200);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  border-radius: var(--radius-xl);
+  transition: width var(--transition-base);
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.3);
+}
+
+.progress-info {
+  text-align: center;
+}
+
+.progress-text {
+  margin: 0;
+  color: var(--gray-600);
+  font-size: 0.85rem;
+}
+
+.max-level-badge {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+  border: 2px solid rgba(251, 191, 36, 0.3);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: #92400e;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.level-rewards {
+  padding: var(--spacing-6);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.level-rewards h4 {
+  margin: 0 0 var(--spacing-4);
+  color: var(--gray-900);
+  font-size: 0.95rem;
+}
+
+.rewards-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.rewards-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  color: var(--gray-700);
+  font-size: 0.9rem;
+}
+
+.reward-icon {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .level-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+  }
+
+  .points-display {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .level-icon {
+    font-size: 2rem;
+  }
+}
