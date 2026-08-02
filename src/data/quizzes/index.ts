@@ -1,5 +1,5 @@
 import { Quiz } from '../../types';
-import { mathQuizzes } from './mathQuizzes';
+import { mathQuizzesComprehensive } from './mathQuizzesComprehensive';
 
 export const quizzes: Quiz[] = [
   // Reading & Writing Quizzes (6)
@@ -317,8 +317,8 @@ export const quizzes: Quiz[] = [
     orderIndex: 3
   },
 
-  // Additional Math Quizzes (7 quizzes for comprehensive coverage)
-  ...mathQuizzes,
+  // Comprehensive Math Quizzes (4 quizzes with 20+ questions each)
+  ...mathQuizzesComprehensive,
 
   // Essay/Writing Quizzes (4)
   {
