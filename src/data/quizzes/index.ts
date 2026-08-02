@@ -1,4 +1,5 @@
 import { Quiz } from '../../types';
+import { mathQuizzes } from './mathQuizzes';
 
 export const quizzes: Quiz[] = [
   // Reading & Writing Quizzes (6)
@@ -316,18 +317,21 @@ export const quizzes: Quiz[] = [
     orderIndex: 3
   },
 
+  // Additional Math Quizzes (7 quizzes for comprehensive coverage)
+  ...mathQuizzes,
+
   // Essay/Writing Quizzes (4)
   {
     id: 'quiz-essay-001',
     title: 'Grammar in Writing',
-    subject: 'math',
+    subject: 'essay',
     topic: 'writing-fundamentals',
     description: 'Test grammar rules specific to essay writing',
     questions: [
       {
         id: 'q-essay-001',
         type: 'multiple-choice',
-        subject: 'math',
+        subject: 'essay',
         difficulty: 'medium',
         questionText: 'Which sentence has correct grammar?',
         options: [
@@ -352,14 +356,14 @@ export const quizzes: Quiz[] = [
   {
     id: 'quiz-essay-002',
     title: 'Thesis and Argument',
-    subject: 'math',
+    subject: 'essay',
     topic: 'essay-structure',
     description: 'Evaluate thesis statements and argument strength',
     questions: [
       {
         id: 'q-essay-004',
         type: 'multiple-choice',
-        subject: 'math',
+        subject: 'essay',
         difficulty: 'medium',
         questionText: 'Which is the strongest thesis statement?',
         options: [

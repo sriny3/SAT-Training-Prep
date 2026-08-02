@@ -5,7 +5,7 @@ export const essayLessons: Lesson[] = [
   {
     id: 'lesson-essay-001',
     title: 'Grammar Review for Writing',
-    subject: 'math',
+    subject: 'essay',
     topic: 'writing-fundamentals',
     difficulty: 'easy',
     duration: 20,
@@ -64,7 +64,7 @@ export const essayLessons: Lesson[] = [
   {
     id: 'lesson-essay-002',
     title: 'Sentence Variety and Style',
-    subject: 'math',
+    subject: 'essay',
     topic: 'writing-fundamentals',
     difficulty: 'medium',
     duration: 20,
@@ -124,7 +124,7 @@ export const essayLessons: Lesson[] = [
   {
     id: 'lesson-essay-003',
     title: 'Word Choice and Vocabulary in Writing',
-    subject: 'math',
+    subject: 'essay',
     topic: 'writing-fundamentals',
     difficulty: 'medium',
     duration: 20,
@@ -186,7 +186,7 @@ export const essayLessons: Lesson[] = [
   {
     id: 'lesson-essay-004',
     title: 'Thesis Statements and Central Ideas',
-    subject: 'math',
+    subject: 'essay',
     topic: 'essay-structure',
     difficulty: 'medium',
     duration: 20,
@@ -246,7 +246,7 @@ export const essayLessons: Lesson[] = [
   {
     id: 'lesson-essay-005',
     title: 'Introduction and Hooks',
-    subject: 'math',
+    subject: 'essay',
     topic: 'essay-structure',
     difficulty: 'medium',
     duration: 20,
@@ -306,7 +306,7 @@ export const essayLessons: Lesson[] = [
   {
     id: 'lesson-essay-006',
     title: 'Body Paragraphs and Evidence',
-    subject: 'math',
+    subject: 'essay',
     topic: 'essay-structure',
     difficulty: 'medium',
     duration: 25,
@@ -367,7 +367,7 @@ export const essayLessons: Lesson[] = [
   {
     id: 'lesson-essay-007',
     title: 'Conclusions and Final Impact',
-    subject: 'math',
+    subject: 'essay',
     topic: 'essay-structure',
     difficulty: 'medium',
     duration: 20,
@@ -430,7 +430,7 @@ export const essayLessons: Lesson[] = [
   {
     id: 'lesson-essay-008',
     title: 'Building Strong Arguments',
-    subject: 'math',
+    subject: 'essay',
     topic: 'argument-development',
     difficulty: 'hard',
     duration: 25,
@@ -491,7 +491,7 @@ export const essayLessons: Lesson[] = [
   {
     id: 'lesson-essay-009',
     title: 'Using Counterarguments Effectively',
-    subject: 'math',
+    subject: 'essay',
     topic: 'argument-development',
     difficulty: 'hard',
     duration: 20,
@@ -552,7 +552,7 @@ export const essayLessons: Lesson[] = [
   {
     id: 'lesson-essay-010',
     title: 'Revision and Editing',
-    subject: 'math',
+    subject: 'essay',
     topic: 'argument-development',
     difficulty: 'medium',
     duration: 20,
