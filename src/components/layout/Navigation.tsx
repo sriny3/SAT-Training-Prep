@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
+import { useGameification } from '../../hooks/useGameification';
 import { LogOut, Menu, X } from 'lucide-react';
 import '../styles/layout.css';
 
@@ -14,6 +15,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   onToggleSidebar = () => {},
 }) => {
   const { user, logout } = useAuth();
+  const { gamification } = useGameification();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -40,7 +42,7 @@ export const Navigation: React.FC<NavigationProps> = ({
               <span className="user-avatar">{user.avatar}</span>
               <div className="user-details">
                 <p className="user-name">{user.firstName}</p>
-                <p className="user-level">Level {user.currentLevel}</p>
+                <p className="user-level">Level {gamification.currentLevel.level}</p>
               </div>
             </div>
             <button className="logout-btn" onClick={handleLogout} title="Logout">

@@ -122,14 +122,14 @@ export const ProfilePage: React.FC = () => {
             <div className="achievement-item">
               <Award size={20} />
               <div>
-                <p className="achievement-name">Level {user.currentLevel} Reached</p>
+                <p className="achievement-name">Level {gamification.currentLevel.level} Reached</p>
                 <p className="achievement-desc">Progress through the SAT prep levels</p>
               </div>
             </div>
             <div className="achievement-item">
               <TrendingUp size={20} />
               <div>
-                <p className="achievement-name">{user.currentStreak} Day Streak!</p>
+                <p className="achievement-name">{gamification.currentStreak} Day Streak!</p>
                 <p className="achievement-desc">Keep studying to extend your streak</p>
               </div>
             </div>

@@ -17,7 +17,13 @@ export const LessonDetailPage: React.FC = () => {
 
   const handleMarkComplete = () => {
     if (lesson) {
-      completeLesson(lesson.duration);
+      completeLesson({
+        id: lesson.id,
+        title: lesson.title,
+        subject: lesson.subject,
+        topic: lesson.topic,
+        duration: lesson.duration,
+      });
       setCompleted(true);
     }
   };

@@ -1,4 +1,13 @@
 // User & Authentication Types
+//
+// `User` now represents a Supabase-backed account profile (see
+// src/lib/supabaseClient.ts + supabase/schema.sql). Runtime gamification
+// stats (points, level, streak, badges) live separately in the `progress`
+// table / UserGameification (src/context/GameificationContext.tsx) — the
+// same decoupling this codebase already used for localStorage, just backed
+// by a real database now.
+export type UserRole = 'admin' | 'student';
+
 export interface User {
   id: string;
   email: string;
@@ -8,13 +17,50 @@ export interface User {
   avatar?: string;
   gradeLevel: '7' | '8' | '9' | '10' | '11';
   createdAt: Date;
-  lastLoginAt: Date;
-  totalPoints: number;
-  currentLevel: number;
-  currentStreak: number;
-  longestStreak: number;
-  lastActivityDate: Date;
+  role: UserRole;
   preferences: UserPreferences;
+}
+
+// Rows the admin dashboard reads back from Supabase to build each
+// student's activity history.
+export interface LessonCompletionRecord {
+  id: string;
+  userId: string;
+  lessonId: string;
+  lessonTitle: string;
+  subject: Subject;
+  topic: string;
+  pointsEarned: number;
+  completedAt: string;
+}
+
+export interface QuizAttemptRecord {
+  id: string;
+  userId: string;
+  quizId: string;
+  quizTitle: string;
+  subject: Subject;
+  topic: string;
+  score: number;
+  maxScore: number;
+  percentage: number;
+  pointsEarned: number;
+  completedAt: string;
+}
+
+export interface PracticeTestAttemptRecord {
+  id: string;
+  userId: string;
+  testId: string;
+  testTitle: string;
+  subject: Subject;
+  topic: string;
+  correctCount: number;
+  totalQuestions: number;
+  percentage: number;
+  pointsEarned: number;
+  timeSpentSeconds: number;
+  completedAt: string;
 }
 
 export interface UserPreferences {

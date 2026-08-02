@@ -33,25 +33,6 @@ export const LoginForm: React.FC = () => {
     }
   };
 
-  const handleDemoLogin = async (demoEmail: string) => {
-    setEmail(demoEmail);
-    setPassword('demo');
-    setIsLoading(true);
-
-    try {
-      await login(demoEmail, 'demo');
-      addToast('Demo login successful!', 'success');
-      navigate('/dashboard');
-    } catch (err) {
-      const errorMessage =
-        err instanceof Error ? err.message : 'Demo login failed.';
-      setError(errorMessage);
-      addToast(errorMessage, 'error');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   return (
     <div className="auth-container">
       <div className="auth-card">
@@ -95,37 +76,6 @@ export const LoginForm: React.FC = () => {
             {isLoading ? 'Logging in...' : 'Log In'}
           </button>
         </form>
-
-        <div className="auth-divider">
-          <span>Demo Accounts</span>
-        </div>
-
-        <div className="demo-buttons">
-          <button
-            type="button"
-            className="btn btn-secondary"
-            onClick={() => handleDemoLogin('student1@example.com')}
-            disabled={isLoading}
-          >
-            👨‍🎓 Alex
-          </button>
-          <button
-            type="button"
-            className="btn btn-secondary"
-            onClick={() => handleDemoLogin('student2@example.com')}
-            disabled={isLoading}
-          >
-            👩‍🎓 Sarah
-          </button>
-          <button
-            type="button"
-            className="btn btn-secondary"
-            onClick={() => handleDemoLogin('student3@example.com')}
-            disabled={isLoading}
-          >
-            👨‍💼 Michael
-          </button>
-        </div>
 
         <p className="auth-footer">
           Don't have an account?{' '}

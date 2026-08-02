@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Clock, Flag, ChevronLeft, ChevronRight, CheckCircle } from 'lucide-react';
 import { practiceTests } from '../data/tests/practiceTests';
 import { testQuestions } from '../data/tests/testQuestions';
+import { usePracticeTestRewards } from '../hooks/usePracticeTestRewards';
 import './pages.css';
 
 interface TestAnswer {
@@ -14,6 +15,7 @@ interface TestAnswer {
 export const PracticeTestTakingPage: React.FC = () => {
   const { testId } = useParams<{ testId: string }>();
   const navigate = useNavigate();
+  const { completePracticeTest } = usePracticeTestRewards();
 
   const test = practiceTests.find(t => t.id === testId);
 
@@ -23,6 +25,7 @@ export const PracticeTestTakingPage: React.FC = () => {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [testComplete, setTestComplete] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const rewardsLoggedRef = useRef(false);
 
   // Timer effect
   useEffect(() => {
@@ -40,6 +43,28 @@ export const PracticeTestTakingPage: React.FC = () => {
 
     return () => clearInterval(timer);
   }, [testComplete, isPaused, test]);
+
+  // Award points and log this attempt to Supabase exactly once when the
+  // test finishes, so the admin dashboard's activity history reflects real
+  // scored attempts instead of nothing at all.
+  useEffect(() => {
+    if (!testComplete || !test || rewardsLoggedRef.current) return;
+    rewardsLoggedRef.current = true;
+
+    const correctCount = answers.filter(a => {
+      const question = testQuestions.find(q => q.id === a.questionId);
+      return question && a.selectedAnswer === question.correctAnswer;
+    }).length;
+    const timeSpent = test.totalTimeLimit * 60 - timeRemaining;
+
+    completePracticeTest(
+      { id: test.id, title: test.title, subject: 'reading-writing', topic: 'full-length-test', difficulty: test.difficulty },
+      correctCount,
+      testQuestions.length,
+      timeSpent
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [testComplete, test]);
 
   if (!test) {
     return (
@@ -124,7 +149,12 @@ export const PracticeTestTakingPage: React.FC = () => {
   };
 
   if (testComplete) {
-    const score = calculateScore();
+    const correctCount = answers.filter(a => {
+      const question = testQuestions.find(q => q.id === a.questionId);
+      return question && a.selectedAnswer === question.correctAnswer;
+    }).length;
+    // Scale correctness onto the familiar 400-1600 SAT-style range.
+    const score = Math.round(400 + (correctCount / testQuestions.length) * 1200);
     const percentage = Math.round((score / 1600) * 100);
     const answeredCount = answers.length;
 
@@ -288,7 +318,3 @@ export const PracticeTestTakingPage: React.FC = () => {
     </div>
   );
 };
-
-function calculateScore(): number {
-  return Math.floor(Math.random() * 400) + 1100;
-}

@@ -50,6 +50,24 @@ export class GamificationService {
   }
 
   /**
+   * Calculate points earned from a full-length practice test — weighted
+   * higher than a single quiz since it represents a much larger time
+   * investment (a full multi-section timed test vs. one topic quiz).
+   */
+  static calculatePracticeTestPoints(
+    correctCount: number,
+    totalQuestions: number,
+    difficulty: 'easy' | 'medium' | 'hard'
+  ): PointsReward {
+    const quizPoints = GamificationService.calculateQuizPoints(correctCount, totalQuestions, difficulty);
+    const percentage = totalQuestions > 0 ? (correctCount / totalQuestions) * 100 : 0;
+    return {
+      amount: quizPoints.amount * 3,
+      reason: `Practice test completed - ${difficulty} difficulty (${Math.round(percentage)}%)`
+    };
+  }
+
+  /**
    * Calculate points for lesson completion
    */
   static calculateLessonPoints(duration: number): PointsReward {

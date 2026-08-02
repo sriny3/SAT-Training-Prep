@@ -19,6 +19,7 @@ import { ProfilePage } from './pages/ProfilePage';
 import { LeaderboardPage } from './pages/LeaderboardPage';
 import { PracticeTestsPage } from './pages/PracticeTestsPage';
 import { TestResultsPage } from './pages/TestResultsPage';
+import { AdminDashboardPage } from './pages/AdminDashboardPage';
 import './components/styles/global.css';
 
 const AppContent: React.FC = () => {
@@ -144,6 +145,17 @@ const AppContent: React.FC = () => {
           <ProtectedRoute>
             <MainLayout>
               <ProfilePage />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/admin"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <AdminDashboardPage />
             </MainLayout>
           </ProtectedRoute>
         }

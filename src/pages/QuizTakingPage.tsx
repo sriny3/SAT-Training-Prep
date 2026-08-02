@@ -72,7 +72,12 @@ export const QuizTakingPage: React.FC = () => {
     } else {
       const totalScore = userAnswers.reduce((sum, a) => sum + a.points, 0);
       const maxScore = quiz.questions.reduce((sum, q) => sum + q.points, 0);
-      completeQuiz(totalScore, maxScore, 'medium');
+      completeQuiz(
+        { id: quiz.id, title: quiz.title, subject: quiz.subject, topic: quiz.topic },
+        totalScore,
+        maxScore,
+        quiz.difficulty
+      );
       setQuizComplete(true);
     }
   };

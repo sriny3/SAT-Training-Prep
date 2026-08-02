@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { BookOpen, BarChart3, Trophy, Settings, LogOut } from 'lucide-react';
+import { BookOpen, BarChart3, Trophy, Settings, LogOut, ShieldAlert } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 import '../styles/layout.css';
 
@@ -10,7 +10,7 @@ interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const { logout } = useAuth();
+  const { logout, user } = useAuth();
 
   const handleLogout = () => {
     logout();
@@ -81,6 +81,20 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <span>Profile</span>
             </NavLink>
           </div>
+
+          {user?.role === 'admin' && (
+            <div className="nav-section">
+              <h3 className="nav-section-title">Admin</h3>
+              <NavLink
+                to="/admin"
+                className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+                onClick={onClose}
+              >
+                <ShieldAlert size={20} />
+                <span>Admin Dashboard</span>
+              </NavLink>
+            </div>
+          )}
 
           <div className="nav-section">
             <button className="nav-item logout-item" onClick={handleLogout}>

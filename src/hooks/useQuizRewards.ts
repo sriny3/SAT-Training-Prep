@@ -1,19 +1,50 @@
 import { useCallback } from 'react';
 import { useGameification } from './useGameification';
 import { useNotification } from './useNotification';
+import { useAuth } from './useAuth';
 import { GamificationService } from '../services/GamificationService';
 import { createBadgeNotification, createLevelUpNotification } from '../components/gamification/AchievementNotification';
 import { allBadges } from '../data/gamification/badges';
+import { supabase } from '../lib/supabaseClient';
+import { Subject } from '../types';
+
+interface QuizInfo {
+  id: string;
+  title: string;
+  subject: Subject;
+  topic: string;
+}
 
 export const useQuizRewards = () => {
   const { addPoints, unlockBadge, getLevelProgress, gamification } = useGameification();
   const { addToast } = useNotification();
+  const { user } = useAuth();
 
   const completeQuiz = useCallback(
-    (score: number, maxScore: number, difficulty: 'easy' | 'medium' | 'hard') => {
+    (quiz: QuizInfo, score: number, maxScore: number, difficulty: 'easy' | 'medium' | 'hard') => {
       const pointsReward = GamificationService.calculateQuizPoints(score, maxScore, difficulty);
 
       addPoints(pointsReward.amount);
+
+      if (user) {
+        const percentage = maxScore > 0 ? Math.round((score / maxScore) * 100) : 0;
+        supabase
+          .from('quiz_attempts')
+          .insert({
+            user_id: user.id,
+            quiz_id: quiz.id,
+            quiz_title: quiz.title,
+            subject: quiz.subject,
+            topic: quiz.topic,
+            score,
+            max_score: maxScore,
+            percentage,
+            points_earned: pointsReward.amount,
+          })
+          .then(({ error }) => {
+            if (error) console.error('Failed to log quiz attempt:', error);
+          });
+      }
 
       addToast(
         `📝 Quiz Complete! +${pointsReward.amount} points earned (${pointsReward.reason})`,
@@ -54,7 +85,7 @@ export const useQuizRewards = () => {
         reason: pointsReward.reason
       };
     },
-    [addPoints, unlockBadge, getLevelProgress, gamification, addToast]
+    [addPoints, unlockBadge, getLevelProgress, gamification, addToast, user]
   );
 
   return { completeQuiz };
