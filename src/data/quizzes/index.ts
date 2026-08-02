@@ -1,5 +1,6 @@
 import { Quiz } from '../../types';
 import { mathQuizzesComprehensive } from './mathQuizzesComprehensive';
+import { englishQuizzesComprehensive } from './englishQuizzesComprehensive';
 
 export const quizzes: Quiz[] = [
   // Reading & Writing Quizzes (6)
@@ -320,71 +321,10 @@ export const quizzes: Quiz[] = [
   // Comprehensive Math Quizzes (4 quizzes with 20+ questions each)
   ...mathQuizzesComprehensive,
 
-  // Essay/Writing Quizzes (4)
-  {
-    id: 'quiz-essay-001',
-    title: 'Grammar in Writing',
-    subject: 'essay',
-    topic: 'writing-fundamentals',
-    description: 'Test grammar rules specific to essay writing',
-    questions: [
-      {
-        id: 'q-essay-001',
-        type: 'multiple-choice',
-        subject: 'essay',
-        difficulty: 'medium',
-        questionText: 'Which sentence has correct grammar?',
-        options: [
-          { id: 'a', text: 'The team are ready to play.', isCorrect: false },
-          { id: 'b', text: 'The team is ready to play.', isCorrect: true },
-          { id: 'c', text: 'The team been ready to play.', isCorrect: false },
-          { id: 'd', text: 'The team do ready to play.', isCorrect: false }
-        ],
-        correctAnswer: 'b',
-        explanation: '"Team" is a collective noun and takes a singular verb "is".',
-        hints: ['Is "team" singular or plural?'],
-        points: 10
-      }
-    ],
-    timeLimit: 10,
-    difficulty: 'medium',
-    passingScore: 70,
-    pointsAvailable: 10,
-    estimatedDuration: 8,
-    orderIndex: 1
-  },
-  {
-    id: 'quiz-essay-002',
-    title: 'Thesis and Argument',
-    subject: 'essay',
-    topic: 'essay-structure',
-    description: 'Evaluate thesis statements and argument strength',
-    questions: [
-      {
-        id: 'q-essay-004',
-        type: 'multiple-choice',
-        subject: 'essay',
-        difficulty: 'medium',
-        questionText: 'Which is the strongest thesis statement?',
-        options: [
-          { id: 'a', text: 'Social media is popular.', isCorrect: false },
-          { id: 'b', text: 'This essay is about social media.', isCorrect: false },
-          { id: 'c', text: 'While social media connects us globally, excessive use damages mental health and relationships.', isCorrect: true },
-          { id: 'd', text: 'Social media is good and bad.', isCorrect: false }
-        ],
-        correctAnswer: 'c',
-        explanation: 'Option C takes a clear position, is specific, and previews the arguments.',
-        hints: ['A strong thesis takes a clear, specific position that can be debated and supported.'],
-        points: 10
-      }
-    ],
-    timeLimit: 10,
-    difficulty: 'medium',
-    passingScore: 70,
-    pointsAvailable: 10,
-    estimatedDuration: 8,
-    orderIndex: 2
-  }
+  // Comprehensive English Quizzes (3 quizzes with 20+ questions each)
+  ...englishQuizzesComprehensive,
+
+  // Legacy Essay Quizzes (deprecated - replaced by comprehensive English quizzes)
 ];
 
 export const getQuizById = (id: string): Quiz | undefined => {
