@@ -57,7 +57,7 @@ export const mathLessons: Lesson[] = [
       'Check your work by substituting back',
       'Remember: whatever you do to one side, do to the other'
     ],
-    practiceQuestions: ['q-algebra-001', 'q-algebra-002'],
+    practiceQuestions: ['lesson-alg-exp-001-q01', 'lesson-alg-exp-001-q02', 'lesson-alg-exp-001-q03', 'lesson-alg-exp-001-q04', 'lesson-alg-exp-001-q05', 'lesson-alg-exp-001-q06', 'lesson-alg-exp-001-q07', 'lesson-alg-exp-001-q08', 'lesson-alg-exp-001-q09', 'lesson-alg-exp-001-q10', 'lesson-alg-exp-001-q11', 'lesson-alg-exp-001-q12', 'lesson-alg-exp-001-q13', 'lesson-alg-exp-001-q14', 'lesson-alg-exp-001-q15', 'lesson-alg-exp-001-q16', 'lesson-alg-exp-001-q17', 'lesson-alg-exp-001-q18', 'lesson-alg-exp-001-q19', 'lesson-alg-exp-001-q20'],
     estimatedReadTime: 15,
     orderIndex: 1
   },
@@ -116,7 +116,7 @@ export const mathLessons: Lesson[] = [
       'Choose elimination if coefficients allow easy elimination',
       'Always check your solution in both original equations'
     ],
-    practiceQuestions: ['q-algebra-003', 'q-algebra-004'],
+    practiceQuestions: ['lesson-alg-sys-002-q01', 'lesson-alg-sys-002-q02', 'lesson-alg-sys-002-q03', 'lesson-alg-sys-002-q04', 'lesson-alg-sys-002-q05', 'lesson-alg-sys-002-q06', 'lesson-alg-sys-002-q07', 'lesson-alg-sys-002-q08', 'lesson-alg-sys-002-q09', 'lesson-alg-sys-002-q10', 'lesson-alg-sys-002-q11', 'lesson-alg-sys-002-q12', 'lesson-alg-sys-002-q13', 'lesson-alg-sys-002-q14', 'lesson-alg-sys-002-q15', 'lesson-alg-sys-002-q16', 'lesson-alg-sys-002-q17', 'lesson-alg-sys-002-q18', 'lesson-alg-sys-002-q19', 'lesson-alg-sys-002-q20'],
     estimatedReadTime: 15,
     orderIndex: 2
   },
@@ -175,7 +175,7 @@ export const mathLessons: Lesson[] = [
       'The discriminant (b² - 4ac) tells you the number of real solutions',
       'Always check your solutions by substituting back'
     ],
-    practiceQuestions: ['q-algebra-005', 'q-algebra-006'],
+    practiceQuestions: ['lesson-alg-quad-003-q01', 'lesson-alg-quad-003-q02', 'lesson-alg-quad-003-q03', 'lesson-alg-quad-003-q04', 'lesson-alg-quad-003-q05', 'lesson-alg-quad-003-q06', 'lesson-alg-quad-003-q07', 'lesson-alg-quad-003-q08', 'lesson-alg-quad-003-q09', 'lesson-alg-quad-003-q10', 'lesson-alg-quad-003-q11', 'lesson-alg-quad-003-q12', 'lesson-alg-quad-003-q13', 'lesson-alg-quad-003-q14', 'lesson-alg-quad-003-q15', 'lesson-alg-quad-003-q16', 'lesson-alg-quad-003-q17', 'lesson-alg-quad-003-q18', 'lesson-alg-quad-003-q19', 'lesson-alg-quad-003-q20'],
     estimatedReadTime: 15,
     orderIndex: 3
   },
@@ -234,7 +234,7 @@ export const mathLessons: Lesson[] = [
       'Always think about what values are possible (domain) and what outputs result (range)',
       'Use the vertical line test for graphs'
     ],
-    practiceQuestions: ['q-algebra-007', 'q-algebra-008'],
+    practiceQuestions: ['lesson-alg-poly-004-q01', 'lesson-alg-poly-004-q02', 'lesson-alg-poly-004-q03', 'lesson-alg-poly-004-q04', 'lesson-alg-poly-004-q05', 'lesson-alg-poly-004-q06', 'lesson-alg-poly-004-q07', 'lesson-alg-poly-004-q08', 'lesson-alg-poly-004-q09', 'lesson-alg-poly-004-q10', 'lesson-alg-poly-004-q11', 'lesson-alg-poly-004-q12', 'lesson-alg-poly-004-q13', 'lesson-alg-poly-004-q14', 'lesson-alg-poly-004-q15', 'lesson-alg-poly-004-q16', 'lesson-alg-poly-004-q17', 'lesson-alg-poly-004-q18', 'lesson-alg-poly-004-q19', 'lesson-alg-poly-004-q20'],
     estimatedReadTime: 15,
     orderIndex: 4
   },
@@ -293,7 +293,7 @@ export const mathLessons: Lesson[] = [
       'Test a value to verify your solution',
       'Graph your solutions to visualize them'
     ],
-    practiceQuestions: ['q-algebra-009'],
+    practiceQuestions: ['lesson-alg-ineq-005-q01', 'lesson-alg-ineq-005-q02', 'lesson-alg-ineq-005-q03', 'lesson-alg-ineq-005-q04', 'lesson-alg-ineq-005-q05', 'lesson-alg-ineq-005-q06', 'lesson-alg-ineq-005-q07', 'lesson-alg-ineq-005-q08', 'lesson-alg-ineq-005-q09', 'lesson-alg-ineq-005-q10', 'lesson-alg-ineq-005-q11', 'lesson-alg-ineq-005-q12', 'lesson-alg-ineq-005-q13', 'lesson-alg-ineq-005-q14', 'lesson-alg-ineq-005-q15', 'lesson-alg-ineq-005-q16', 'lesson-alg-ineq-005-q17', 'lesson-alg-ineq-005-q18', 'lesson-alg-ineq-005-q19', 'lesson-alg-ineq-005-q20'],
     estimatedReadTime: 15,
     orderIndex: 5
   },
@@ -354,7 +354,7 @@ export const mathLessons: Lesson[] = [
       'Remember: all triangle angles sum to 180°',
       'Memorize properties of special triangles'
     ],
-    practiceQuestions: ['q-geometry-001', 'q-geometry-002'],
+    practiceQuestions: ['lesson-geom-angle-001-q01', 'lesson-geom-angle-001-q02', 'lesson-geom-angle-001-q03', 'lesson-geom-angle-001-q04', 'lesson-geom-angle-001-q05', 'lesson-geom-angle-001-q06', 'lesson-geom-angle-001-q07', 'lesson-geom-angle-001-q08', 'lesson-geom-angle-001-q09', 'lesson-geom-angle-001-q10', 'lesson-geom-angle-001-q11', 'lesson-geom-angle-001-q12', 'lesson-geom-angle-001-q13', 'lesson-geom-angle-001-q14', 'lesson-geom-angle-001-q15', 'lesson-geom-angle-001-q16', 'lesson-geom-angle-001-q17', 'lesson-geom-angle-001-q18', 'lesson-geom-angle-001-q19', 'lesson-geom-angle-001-q20'],
     estimatedReadTime: 15,
     orderIndex: 6
   },
@@ -413,7 +413,7 @@ export const mathLessons: Lesson[] = [
       'Remember: area has r², circumference has 2r or d',
       'Watch for problems that ask for exact answers (with π) vs. decimal'
     ],
-    practiceQuestions: ['q-geometry-003', 'q-geometry-004'],
+    practiceQuestions: ['lesson-geom-tri-002-q01', 'lesson-geom-tri-002-q02', 'lesson-geom-tri-002-q03', 'lesson-geom-tri-002-q04', 'lesson-geom-tri-002-q05', 'lesson-geom-tri-002-q06', 'lesson-geom-tri-002-q07', 'lesson-geom-tri-002-q08', 'lesson-geom-tri-002-q09', 'lesson-geom-tri-002-q10', 'lesson-geom-tri-002-q11', 'lesson-geom-tri-002-q12', 'lesson-geom-tri-002-q13', 'lesson-geom-tri-002-q14', 'lesson-geom-tri-002-q15', 'lesson-geom-tri-002-q16', 'lesson-geom-tri-002-q17', 'lesson-geom-tri-002-q18', 'lesson-geom-tri-002-q19', 'lesson-geom-tri-002-q20'],
     estimatedReadTime: 15,
     orderIndex: 7
   },
@@ -464,7 +464,7 @@ export const mathLessons: Lesson[] = [
       'Draw and label 3D figures',
       'Check that units make sense (cubic vs. square)'
     ],
-    practiceQuestions: ['q-geometry-005', 'q-geometry-006'],
+    practiceQuestions: ['lesson-geom-circle-003-q01', 'lesson-geom-circle-003-q02', 'lesson-geom-circle-003-q03', 'lesson-geom-circle-003-q04', 'lesson-geom-circle-003-q05', 'lesson-geom-circle-003-q06', 'lesson-geom-circle-003-q07', 'lesson-geom-circle-003-q08', 'lesson-geom-circle-003-q09', 'lesson-geom-circle-003-q10', 'lesson-geom-circle-003-q11', 'lesson-geom-circle-003-q12', 'lesson-geom-circle-003-q13', 'lesson-geom-circle-003-q14', 'lesson-geom-circle-003-q15', 'lesson-geom-circle-003-q16', 'lesson-geom-circle-003-q17', 'lesson-geom-circle-003-q18', 'lesson-geom-circle-003-q19', 'lesson-geom-circle-003-q20'],
     estimatedReadTime: 18,
     orderIndex: 8
   },
@@ -531,7 +531,7 @@ export const mathLessons: Lesson[] = [
       'Remember slope: rise over run',
       'Parallel = same slope; perpendicular = negative reciprocal'
     ],
-    practiceQuestions: ['q-geometry-007'],
+    practiceQuestions: ['lesson-geom-area-004-q01', 'lesson-geom-area-004-q02', 'lesson-geom-area-004-q03', 'lesson-geom-area-004-q04', 'lesson-geom-area-004-q05', 'lesson-geom-area-004-q06', 'lesson-geom-area-004-q07', 'lesson-geom-area-004-q08', 'lesson-geom-area-004-q09', 'lesson-geom-area-004-q10', 'lesson-geom-area-004-q11', 'lesson-geom-area-004-q12', 'lesson-geom-area-004-q13', 'lesson-geom-area-004-q14', 'lesson-geom-area-004-q15', 'lesson-geom-area-004-q16', 'lesson-geom-area-004-q17', 'lesson-geom-area-004-q18', 'lesson-geom-area-004-q19', 'lesson-geom-area-004-q20'],
     estimatedReadTime: 15,
     orderIndex: 9
   },
@@ -590,7 +590,7 @@ export const mathLessons: Lesson[] = [
       'Remember: rigid = same size/shape',
       'Use coordinates to track transformations'
     ],
-    practiceQuestions: ['q-geometry-008'],
+    practiceQuestions: ['lesson-geom-solid-005-q01', 'lesson-geom-solid-005-q02', 'lesson-geom-solid-005-q03', 'lesson-geom-solid-005-q04', 'lesson-geom-solid-005-q05', 'lesson-geom-solid-005-q06', 'lesson-geom-solid-005-q07', 'lesson-geom-solid-005-q08', 'lesson-geom-solid-005-q09', 'lesson-geom-solid-005-q10', 'lesson-geom-solid-005-q11', 'lesson-geom-solid-005-q12', 'lesson-geom-solid-005-q13', 'lesson-geom-solid-005-q14', 'lesson-geom-solid-005-q15', 'lesson-geom-solid-005-q16', 'lesson-geom-solid-005-q17', 'lesson-geom-solid-005-q18', 'lesson-geom-solid-005-q19', 'lesson-geom-solid-005-q20'],
     estimatedReadTime: 15,
     orderIndex: 10
   },

@@ -364,7 +364,7 @@ export const readingWritingLessons: Lesson[] = [
       'Use punctuation (periods, commas, semicolons) correctly',
       'Vary your sentence types in writing for better flow'
     ],
-    practiceQuestions: ['q-grammar-001', 'q-grammar-002'],
+    practiceQuestions: ['lesson-gram-agreement-001-q01', 'lesson-gram-agreement-001-q02', 'lesson-gram-agreement-001-q03', 'lesson-gram-agreement-001-q04', 'lesson-gram-agreement-001-q05', 'lesson-gram-agreement-001-q06', 'lesson-gram-agreement-001-q07', 'lesson-gram-agreement-001-q08', 'lesson-gram-agreement-001-q09', 'lesson-gram-agreement-001-q10', 'lesson-gram-agreement-001-q11', 'lesson-gram-agreement-001-q12', 'lesson-gram-agreement-001-q13', 'lesson-gram-agreement-001-q14', 'lesson-gram-agreement-001-q15', 'lesson-gram-agreement-001-q16', 'lesson-gram-agreement-001-q17', 'lesson-gram-agreement-001-q18', 'lesson-gram-agreement-001-q19', 'lesson-gram-agreement-001-q20'],
     estimatedReadTime: 15,
     orderIndex: 6
   },
@@ -423,7 +423,7 @@ export const readingWritingLessons: Lesson[] = [
       'Read your work aloud to catch tense shifts',
       'Remember: have/has + past participle = perfect tenses'
     ],
-    practiceQuestions: ['q-grammar-003', 'q-grammar-004'],
+    practiceQuestions: ['lesson-gram-tense-002-q01', 'lesson-gram-tense-002-q02', 'lesson-gram-tense-002-q03', 'lesson-gram-tense-002-q04', 'lesson-gram-tense-002-q05', 'lesson-gram-tense-002-q06', 'lesson-gram-tense-002-q07', 'lesson-gram-tense-002-q08', 'lesson-gram-tense-002-q09', 'lesson-gram-tense-002-q10', 'lesson-gram-tense-002-q11', 'lesson-gram-tense-002-q12', 'lesson-gram-tense-002-q13', 'lesson-gram-tense-002-q14', 'lesson-gram-tense-002-q15', 'lesson-gram-tense-002-q16', 'lesson-gram-tense-002-q17', 'lesson-gram-tense-002-q18', 'lesson-gram-tense-002-q19', 'lesson-gram-tense-002-q20'],
     estimatedReadTime: 15,
     orderIndex: 7
   },
@@ -482,7 +482,7 @@ export const readingWritingLessons: Lesson[] = [
       'Check that pronouns match in number and gender',
       'When in doubt, repeat the noun instead of using a pronoun'
     ],
-    practiceQuestions: ['q-grammar-005', 'q-grammar-006'],
+    practiceQuestions: ['lesson-gram-pronouns-003-q01', 'lesson-gram-pronouns-003-q02', 'lesson-gram-pronouns-003-q03', 'lesson-gram-pronouns-003-q04', 'lesson-gram-pronouns-003-q05', 'lesson-gram-pronouns-003-q06', 'lesson-gram-pronouns-003-q07', 'lesson-gram-pronouns-003-q08', 'lesson-gram-pronouns-003-q09', 'lesson-gram-pronouns-003-q10', 'lesson-gram-pronouns-003-q11', 'lesson-gram-pronouns-003-q12', 'lesson-gram-pronouns-003-q13', 'lesson-gram-pronouns-003-q14', 'lesson-gram-pronouns-003-q15', 'lesson-gram-pronouns-003-q16', 'lesson-gram-pronouns-003-q17', 'lesson-gram-pronouns-003-q18', 'lesson-gram-pronouns-003-q19', 'lesson-gram-pronouns-003-q20'],
     estimatedReadTime: 15,
     orderIndex: 8
   },
@@ -541,7 +541,7 @@ export const readingWritingLessons: Lesson[] = [
       'Ensure each item could stand alone',
       'Use parallel structure for emphasis'
     ],
-    practiceQuestions: ['q-grammar-007'],
+    practiceQuestions: ['lesson-gram-modifiers-004-q01', 'lesson-gram-modifiers-004-q02', 'lesson-gram-modifiers-004-q03', 'lesson-gram-modifiers-004-q04', 'lesson-gram-modifiers-004-q05', 'lesson-gram-modifiers-004-q06', 'lesson-gram-modifiers-004-q07', 'lesson-gram-modifiers-004-q08', 'lesson-gram-modifiers-004-q09', 'lesson-gram-modifiers-004-q10', 'lesson-gram-modifiers-004-q11', 'lesson-gram-modifiers-004-q12', 'lesson-gram-modifiers-004-q13', 'lesson-gram-modifiers-004-q14', 'lesson-gram-modifiers-004-q15', 'lesson-gram-modifiers-004-q16', 'lesson-gram-modifiers-004-q17', 'lesson-gram-modifiers-004-q18', 'lesson-gram-modifiers-004-q19', 'lesson-gram-modifiers-004-q20'],
     estimatedReadTime: 15,
     orderIndex: 9
   },
@@ -600,7 +600,7 @@ export const readingWritingLessons: Lesson[] = [
       'Make sure the subject clearly receives the modifier',
       'Read sentences aloud to catch awkward modifier placement'
     ],
-    practiceQuestions: ['q-grammar-008'],
+    practiceQuestions: ['lesson-gram-parallel-005-q01', 'lesson-gram-parallel-005-q02', 'lesson-gram-parallel-005-q03', 'lesson-gram-parallel-005-q04', 'lesson-gram-parallel-005-q05', 'lesson-gram-parallel-005-q06', 'lesson-gram-parallel-005-q07', 'lesson-gram-parallel-005-q08', 'lesson-gram-parallel-005-q09', 'lesson-gram-parallel-005-q10', 'lesson-gram-parallel-005-q11', 'lesson-gram-parallel-005-q12', 'lesson-gram-parallel-005-q13', 'lesson-gram-parallel-005-q14', 'lesson-gram-parallel-005-q15', 'lesson-gram-parallel-005-q16', 'lesson-gram-parallel-005-q17', 'lesson-gram-parallel-005-q18', 'lesson-gram-parallel-005-q19', 'lesson-gram-parallel-005-q20'],
     estimatedReadTime: 15,
     orderIndex: 10
   },
